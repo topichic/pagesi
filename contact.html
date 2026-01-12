@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Учебный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-graduation-cap"></i> Учебный сайт</h1>
+                <p class="logo-subtitle">Чудин Артём | МФЮА</p>
+            </div>
+            <nav>
+    <ul class="nav-menu">
+        <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> Обо мне</a></li>
+        <li><a href="project-info.html"><i class="fas fa-info-circle"></i> О проекте</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <button class="theme-toggle" id="themeToggle" title="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+</nav>
+        </div>
+    </header>
+
+    <main class="container contact-page">
+        <!-- Хлебные крошки -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Главная</a> / <span>Контакты</span>
+        </nav>
+
+        <!-- Заголовок -->
+        <div class="page-header">
+            <h1><i class="fas fa-address-book"></i> Контакты</h1>
+            <p class="page-subtitle">Свяжитесь со мной или посмотрите исходный код проекта</p>
+        </div>
+
+        <div class="contact-content">
+            <!-- Контактная информация -->
+            <div class="contact-section contact-info">
+                <div class="section-header">
+                    <h2><i class="fas fa-user-graduate"></i> Информация о студенте</h2>
+                </div>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Студент</h3>
+                            <p>Чудин Артём</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Учебное заведение</h3>
+                            <p>Московский финансово-юридический университет (МФЮА)</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Проект</h3>
+                            <p>Учебный сайт на GitHub Pages</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Год создания</h3>
+                            <p>2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Форма обратной связи -->
+            <div class="contact-section contact-form-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-paper-plane"></i> Форма обратной связи</h2>
+                    <p>Заполните форму, и я обязательно отвечу вам</p>
+                </div>
+                
+                <form id="contactForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i> Имя *
+                            </label>
+                            <input type="text" id="name" placeholder="Введите ваше имя" required>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email *
+                            </label>
+                            <input type="email" id="email" placeholder="example@email.com" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">
+                            <i class="fas fa-tag"></i> Тема сообщения
+                        </label>
+                        <input type="text" id="subject" placeholder="О чем вы хотите спросить?">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i> Сообщение *
+                        </label>
+                        <textarea id="message" rows="6" placeholder="Напишите ваше сообщение здесь..." required></textarea>
+                        <div class="error-message" id="messageError"></div>
+                        <div class="char-counter">
+                            <span id="charCount">0</span> / 500 символов
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="subscribe" checked>
+                        <label for="subscribe">Получать уведомления о новых статьях в блоге</label>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Отправить сообщение
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="clearForm()">
+                            <i class="fas fa-trash"></i> Очистить форму
+                        </button>
+                        <button type="button" class="btn btn-outline" onclick="loadSampleData()">
+                            <i class="fas fa-magic"></i> Заполнить пример
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="formMessage" class="message"></div>
+                
+                <div class="form-status">
+                    <h4><i class="fas fa-history"></i> История сообщений</h4>
+                    <p>Сохранено сообщений: <span id="savedMessages">0</span></p>
+                    <button type="button" class="btn btn-small" onclick="viewSavedMessages()">
+                        <i class="fas fa-eye"></i> Просмотреть сохраненные
+                    </button>
+                </div>
+            </div>
+
+            <!-- GitHub репозиторий -->
+            <div class="contact-section github-section">
+                <div class="section-header">
+                    <h2><i class="fab fa-github"></i> GitHub репозиторий проекта</h2>
+                </div>
+                <div class="github-card">
+                    <div class="github-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="github-content">
+                        <h3>Исходный код проекта</h3>
+                        <p>Полный исходный код этого учебного сайта доступен на GitHub. Вы можете изучить код, предложить улучшения или использовать его как основу для своего проекта.</p>
+                        
+                        <div class="repo-info">
+                            <div class="repo-stat">
+                                <i class="fas fa-code-branch"></i>
+                                <span>Репозиторий: pagesi</span>
+                            </div>
+                            <div class="repo-stat">
+                                <i class="fas fa-user"></i>
+                                <span>Владелец: topichic</span>
+                            </div>
+                            <div class="repo-stat">
+                                <i class="fas fa-calendar"></i>
+                                <span>Создан: 2024</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://github.com/topichic/pagesi.git" class="btn btn-primary github-link" target="_blank">
+                            <i class="fab fa-github"></i> Перейти на GitHub
+                        </a>
+                        
+                        <div class="repo-link">
+                            <strong>Ссылка:</strong>
+                            <code>https://github.com/topichic/pagesi.git</code>
+                            <button class="copy-btn" onclick="copyToClipboard('https://github.com/topichic/pagesi.git')">
+                                <i class="fas fa-copy"></i> Копировать
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Карта (заглушка) -->
+            <div class="contact-section map-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-map-marker-alt"></i> Расположение</h2>
+                </div>
+                <div class="map-placeholder">
+                    <div class="map-overlay">
+                        <h3><i class="fas fa-university"></i> МФЮА</h3>
+                        <p>Москва, Россия</p>
+                        <p>Московский финансово-юридический университет</p>
+                    </div>
+                    <div class="map-image">
+                        <i class="fas fa-map"></i>
+                        <p>Интерактивная карта</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Учебный сайт</h3>
+                    <p>Чудин Артём, студент МФЮА</p>
+                    <p>Практический проект по веб-разработке</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> Обо мне</a></li>
+                        <li><a href="project-info.html"><i class="fas fa-blog"></i> О проекте</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-envelope"></i> student@example.com</p>
+                    <p><i class="fas fa-university"></i> МФЮА, Московская область</p>
+                </div>
+                <div class="footer-section">
+                    <h4>GitHub</h4>
+                    <a href="https://github.com/topichic/pagesi.git" class="github-footer-link" target="_blank">
+                        <i class="fab fa-github"></i> topichic/pagesi.git
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Учебный сайт. Чудин Артём, МФЮА.</p>
+                <p class="page-info" id="pageInfo"></p>
+                <p>Последнее посещение: <span id="lastVisit"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для просмотра сохраненных сообщений -->
+    <div id="messagesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-history"></i> Сохраненные сообщения</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="savedMessagesList"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="clearAllMessages()">
+                    <i class="fas fa-trash"></i> Удалить все
+                </button>
+                <button class="btn btn-primary" onclick="closeModal()">
+                    <i class="fas fa-times"></i> Закрыть
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

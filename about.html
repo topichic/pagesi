@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне - Учебный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-graduation-cap"></i> Учебный сайт</h1>
+                <p class="logo-subtitle">Чудин Артём | МФЮА</p>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="about.html" class="active"><i class="fas fa-user"></i> Обо мне</a></li>
+                    <li><a href="project-info.html"><i class="fas fa-info-circle"></i> О проекте</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle" title="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1><i class="fas fa-user"></i> Обо мне</h1>
+        
+        <div class="about-content">
+            <div class="about-image">
+                <div class="avatar">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+            </div>
+            
+            <div class="about-text">
+                <h2>Привет! Я   Чудин Артём</h2>
+                <p>Студент Московского финансово-юридического университета (МФЮА).</p>
+                <p>Этот учебный сайт создан в рамках освоения веб-разработки.</p>
+                
+                <div class="info-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Образование</h3>
+                    <p>МФЮА, направление: Информационные технологии</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3><i class="fas fa-laptop-code"></i> Навыки</h3>
+                    <div class="skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3><i class="fas fa-bullseye"></i> Цели</h3>
+                    <p>Освоить современные технологии веб-разработки и создавать полезные проекты.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Учебный сайт. Чудин Артём, МФЮА</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

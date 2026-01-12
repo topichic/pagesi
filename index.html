@@ -1,12 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой учебный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <h1>Это статический учебный сайт</h1>
-    <p>Тут будет какая то информация</p>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-graduation-cap"></i> УчебныйСайт</h1>
+            </div>
+            <nav>
+    <ul class="nav-menu">
+        <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> Обо мне</a></li>
+        <li><a href="project-info.html"><i class="fas fa-info-circle"></i> О проекте</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <button class="theme-toggle" id="themeToggle" title="Переключить тему">
+        <i class="fas fa-moon"></i>
+    </button>
+</nav>
+        </div>
+    </header>
+<section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Привет! Я <span class="highlight">Студент</span></h2>
+                    <p class="subtitle">Изучаю веб-разработку и создаю свои первые проекты</p>
+                    <p>Этот сайт - моя учебная площадка, где я практикую HTML, CSS и JavaScript. Здесь я буду размещать свои работы и делиться прогрессом в обучении.</p>
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary">Смотреть проекты</a>
+                        <a href="contact.html" class="btn btn-secondary">Связаться со мной</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="about-preview">
+        <div class="container">
+            <h2><i class="fas fa-info-circle"></i> Немного обо мне</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <i class="fas fa-university"></i>
+                    <h3>Образование</h3>
+                    <p>Студент курса по веб-разработке. Изучаю фронтенд технологии.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Навыки</h3>
+                    <p>HTML5, CSS3, JavaScript, Git, адаптивная верстка</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Цели</h3>
+                    <p>Стать фронтенд-разработчиком и создавать современные сайты</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="project-preview">
+    <div class="container">
+        <h2><i class="fas fa-info-circle"></i> О проекте</h2>
+        <div class="preview-cards">
+            <div class="preview-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Цели</h3>
+                <p>Освоить веб-разработку и Git на практике</p>
+                <a href="project-info.html#goals" class="preview-link">Подробнее →</a>
+            </div>
+            <div class="preview-card">
+                <i class="fas fa-tools"></i>
+                <h3>Технологии</h3>
+                <p>HTML5, CSS3, JavaScript, Git, GitHub Pages</p>
+                <a href="project-info.html#technologies" class="preview-link">Подробнее →</a>
+            </div>
+            <div class="preview-card">
+                <i class="fas fa-history"></i>
+                <h3>История</h3>
+                <p>От идеи до деплоя на GitHub Pages</p>
+                <a href="project-info.html#history" class="preview-link">Подробнее →</a>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="project-info.html" class="btn btn-primary">
+                <i class="fas fa-book-open"></i> Вся информация о проекте
+            </a>
+        </div>
+    </div>
+</section>
+<section class="counter-section">
+        <div class="container">
+            <div class="counter-box">
+                <i class="fas fa-eye"></i>
+                <h3>Посещения сайта</h3>
+                <p id="visitCount">Загрузка...</p>
+                <small>Обновляется при каждом посещении</small>
+            </div>
+        </div>
+    </section>
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-graduation-cap"></i> УчебныйСайт</h3>
+                    <p>Площадка для практики веб-разработки</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">Обо мне</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-envelope"></i> student@example.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Город, Страна</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Социальные сети</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-codepen"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Мой учебный сайт. Все права защищены.</p>
+                <p>Создано с <i class="fas fa-heart"></i> для практики веб-разработки</p>
+            </div>
+        </div>
+</footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
